@@ -1,0 +1,43 @@
+
+<div id="main-page d-flex">
+
+  <div class="main-header">
+    <app-header></app-header>
+  </div>
+
+  <div class="main-content">
+
+      <mat-card class="main-search-card">
+          <div class="form-field main-search-form-field">
+              <div class="main-search-label">Numéro de colis</div>
+              <div class="main-search-container-input">
+                <input #test class="main-search-input" formControlName="requiredInput" autocomplete="off" value="8Z00136833343"/>
+                <mat-icon matSuffix class="main-search-icon" (click)="search(test.value)">search</mat-icon>
+              </div>
+          </div>
+      </mat-card>
+
+      <div class="main-spinner" *ngIf="loading">
+        <mat-spinner></mat-spinner>
+        <div class="spinner-center"></div>
+      </div>
+
+      <div *ngIf="colis.length > 0" class="main-list">
+        <mat-card class="main-list-card" *ngFor="let coli of colis">
+            <span class="main-list-event"><b> {{ coli.typeEvenement }} </b></span>
+            <div class="main-list-infos">
+              <div class="main-list-info-loc"> <div> {{ coli.localisation }}, {{ coli.pays }} </div> </div>
+              <div class="main-list-info-date"> <span> {{ coli.date | date:'dd/MM/yyyy, hh:mm:ss' }} </span> </div>
+            </div>
+        </mat-card>
+      </div>
+
+      <div *ngIf="colis.length === 0 && !loading && showColis" class="main-list main-list-empty">
+        <mat-card class="main-list-card">
+          <span class="main-list-event">Aucune étapes touvées pour ce numéro de colis</span>
+        </mat-card>
+      </div>
+
+  </div>
+
+</div>

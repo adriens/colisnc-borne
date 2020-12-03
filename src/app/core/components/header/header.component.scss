@@ -1,0 +1,12 @@
+#header-toolbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0;
+    color: white;
+    z-index: 2000;
+    background: #404447;
+    box-shadow:  2px 2px 2px #404447, -2px -2px 2px #404447;
+}
