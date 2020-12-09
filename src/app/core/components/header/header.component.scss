@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 #header-toolbar {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    padding-left: 1rem;
+    padding: 1rem 2rem;
     margin-bottom: 1rem;
     border-radius: 0;
     color: white;
     z-index: 2000;
-    background: #404447;
-    box-shadow:  2px 2px 2px #404447, -2px -2px 2px #404447;
+    background: #1C3953;
+    box-shadow:  5px 5px 5px #000000, -5px -5px 5px #000000;
+    font-size: clamp(16px, 4vw, 32px);
+    margin-bottom: 3rem;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+
+    img {
+      max-width: 6vw;
+    }
+
+    span {
+      padding-bottom: 12px;
+    }
 }
