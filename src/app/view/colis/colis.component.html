@@ -1,0 +1,31 @@
+
+<div class="grid-container">
+
+  <div class="d-center">
+    <div class="mat-icon-outside">
+      <mat-icon class="action coli-icon" color="accent">{{ setIcon(coli.typeEvenement) }}</mat-icon>
+    </div>
+  </div>
+
+  <p class="main-list-event d-center coli-event"> <b> {{ coli.typeEvenement }} </b> </p>
+
+  <div class="main-list-infos coli-info">
+
+    <div class="d-center mb-2">
+      <div class="info-icon-outside">
+        <mat-icon class="info">place</mat-icon>
+      </div>
+      <div> {{ coli.localisation }}, {{ coli.pays }} </div>
+    </div>
+
+    <div class="d-center mb-2">
+      <div class="info-icon-outside">
+        <mat-icon class="info">event</mat-icon>
+      </div>
+      <span> {{ coli.date | date:'dd/MM/yyyy, hh:mm:ss' }} </span>
+    </div>
+
+
+  </div>
+
+</div>
