@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.main-search-card {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 10px;
+  background: #e6e6e6;
+  box-shadow: 6px 6px 12px #a6a6a6, -6px -6px 12px #ffffff;
+  min-width: 300px;
+
+  .main-search-form-field {
+    width: 100%;
+
+    .main-search-label {
+      margin-bottom: 0.5rem;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .main-search-container-input {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      min-width: 300px;
+
+      input {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 15px;
+        background: #e6e6e6;
+        box-shadow: inset 6px 6px 20px #a6a6a6, inset -6px -6px 20px #ffffff;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      mat-icon {
+        margin-left: 1rem;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #f6f6f6, #cfcfcf);
+        box-shadow:  5px 5px 10px #b8b8b8, -5px -5px 10px #f0f0f0;
+      }
+    }
+
+  }
+
+}
+
+.main-spinner {
+  height: 100%;
+  width: fit-content;
+  border-radius: 50%;
+  justify-content: center;
+  padding: 0.8rem;
+  margin: 1rem auto;
+  background: linear-gradient(-45deg,rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.3));
+  box-shadow: inset 8px 8px 16px 0 rgba(0, 0, 0, 0.2), inset -8px -8px 16px 0 rgba(255, 255, 255, 0.4);
+
+  mat-spinner {
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f6f6f6, #cfcfcf);
+    box-shadow:  5px 5px 10px #b8b8b8, -5px -5px 10px #f0f0f0;
+  }
+}
+
+.main-list {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+
+  mat-card {
+    margin-top: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  5px 5px 10px #cccccc, -5px -5px 10px #f8f8f8;
+    min-width: 300px;
+  }
+}
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle { stroke: #3074A6; }
