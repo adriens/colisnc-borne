@@ -9,9 +9,7 @@ const BASEURL = 'http://localhost:8080/colis';
 })
 export class ColisService {
 
-  constructor(
-    private http: HttpClient,
-  ) { }
+  constructor(private http: HttpClient) { }
 
   getColis(id: string): Observable<Array<any>> {
     return this.http.get<Array<any>>(BASEURL+"/"+id);
