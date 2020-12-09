@@ -1,0 +1,27 @@
+
+<mat-card class="main-search-card">
+    <div class="form-field main-search-form-field">
+        <div class="main-search-label">Numéro de colis</div>
+        <div class="main-search-container-input">
+          <input #test class="main-search-input" formControlName="requiredInput" autocomplete="off"/>
+          <mat-icon matSuffix class="main-search-icon" (click)="search(test.value)">search</mat-icon>
+        </div>
+    </div>
+</mat-card>
+
+<div class="main-spinner" *ngIf="loading">
+  <mat-spinner mode="indeterminate" class="mat-spinner-color"></mat-spinner>
+  <div class="spinner-center"></div>
+</div>
+
+<div *ngIf="colis.length > 0 && !loading && showColis" class="main-list">
+  <mat-card class="main-list-card" *ngFor="let coli of colis">
+    <app-colis [coli]="coli"></app-colis>
+  </mat-card>
+</div>
+
+<div *ngIf="colis.length === 0 && !loading && showColis" class="main-list main-list-empty">
+  <mat-card class="main-list-card">
+    <span class="main-list-event">Aucune étapes touvées pour ce numéro de colis</span>
+  </mat-card>
+</div>
