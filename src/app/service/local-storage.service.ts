@@ -5,17 +5,22 @@ import { SESSION_STORAGE, StorageService, StorageTranscoders } from 'ngx-webstor
 export class LocalStorageService {
 
   loadingStorage: StorageService<boolean>;
-  showColisStorage: StorageService<boolean>;
+  scanStorage: StorageService<boolean>;
+  qrCodeStorage: StorageService<string>;
 
   constructor(@Inject(SESSION_STORAGE) private storage: StorageService) {
     this.loadingStorage = storage.withDefaultTranscoder(StorageTranscoders.BOOLEAN);
-    this.showColisStorage = storage.withDefaultTranscoder(StorageTranscoders.BOOLEAN);
+    this.scanStorage = storage.withDefaultTranscoder(StorageTranscoders.BOOLEAN);
+    this.qrCodeStorage = storage.withDefaultTranscoder(StorageTranscoders.STRING);
   }
 
   public getStoreLoading(): boolean { return this.loadingStorage.get('loading') || false; }
   public setStoreLoading(bool: boolean) { return this.loadingStorage.set('loading', bool); }
 
-  public getStoreShowColis(): boolean { return this.showColisStorage.get('showcolis'); }
-  public setStoreShowColis(bool: boolean) { return this.showColisStorage.set('showcolis', bool); }
+  public getStoreScan(): boolean { return this.scanStorage.get('scan') || false; }
+  public setStoreScan(bool: boolean) { return this.scanStorage.set('scan', bool); }
+
+  public getStoreQrCode(): string { return this.qrCodeStorage.get('qrcode') || ''; }
+  public setStoreQrCode(val: string) { return this.qrCodeStorage.set('qrcode', val); }
 
 }
