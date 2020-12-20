@@ -9,8 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { QRCodeModule } from 'angularx-qrcode';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 import { AppComponent } from './app.component';
 import { LocalStorageService } from './service/local-storage.service';
@@ -50,8 +50,9 @@ import { BottomSheetComponent } from './view/bottom-sheet/bottom-sheet.component
     MatSidenavModule, MatCardModule, MatTableModule,
     MatProgressSpinnerModule, MatBottomSheetModule,
 
-    FlexLayoutModule,
-    NgxQRCodeModule,
+    QRCodeModule,
+    ZXingScannerModule,
+
     StorageServiceModule
   ],
   providers: [LocalStorageService],
