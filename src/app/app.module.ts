@@ -28,8 +28,6 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { HeaderComponent } from './core/components/header/header.component';
 import { SearchComponent } from './view/search/search.component';
 import { ColisComponent } from './view/colis/colis.component';
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { BottomSheetComponent } from './view/bottom-sheet/bottom-sheet.component';
 
 @NgModule({
   declarations: [
