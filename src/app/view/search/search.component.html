@@ -5,7 +5,11 @@
         <div class="main-search-container-input">
           <input #test class="main-search-input" formControlName="requiredInput" autocomplete="off"/>
           <mat-icon matSuffix class="main-search-icon" (click)="search(test.value)">search</mat-icon>
+          <mat-icon matSuffix class="main-search-icon" (click)="readQrcode()">qr_code_scanner</mat-icon>
         </div>
+    </div>
+    <div class="scanner" *ngIf="scan">
+      <zxing-scanner [formats]="['QR_CODE']" (scanSuccess)="scanSuccessHandler($event)"></zxing-scanner>
     </div>
 </mat-card>
 
@@ -14,14 +18,22 @@
   <div class="spinner-center"></div>
 </div>
 
-<div *ngIf="colis.length > 0 && !loading && showColis" class="main-list">
-  <mat-card class="main-list-card" *ngFor="let coli of colis">
-    <app-colis [coli]="coli"></app-colis>
-  </mat-card>
-</div>
+<div class="results">
 
-<div *ngIf="colis.length === 0 && !loading && showColis" class="main-list main-list-empty">
-  <mat-card class="main-list-card">
-    <span class="main-list-event">Aucune étapes touvées pour ce numéro de colis</span>
-  </mat-card>
+  <div *ngIf="colis.length > 0 && !loading && showColis" class="main-list">
+    <mat-card class="main-list-card" *ngFor="let coli of colis">
+      <app-colis [coli]="coli"></app-colis>
+    </mat-card>
+  </div>
+
+  <div *ngIf="colis.length === 0 && !loading && showColis" class="main-list-empty">
+    <mat-card class="main-list-card">
+      <span class="main-list-event">Aucune étapes touvées pour ce numéro de colis</span>
+    </mat-card>
+  </div>
+
+  <div class="qrcode" *ngIf="qrCode != ''">
+    <qrcode class="qrcode-img" [qrdata]="qrCode" [width]="300" [errorCorrectionLevel]="'M'"></qrcode>
+  </div>
+
 </div>
