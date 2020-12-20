@@ -1,67 +1,53 @@
+.d-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "icon event event event event info info";
+.coli-event {
+  display: flex;
+  justify-content: center;
 
-  .d-center {
-    display: flex;
-    justify-content: start;
-    align-items: center;
+  .mat-icon-outside {
+    background: #e6e6e6;
+    box-shadow: inset 5px 5px 14px #b8b8b8, inset -5px -5px 14px #ffffff;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    padding: 0.5rem;
+    margin-right: 1.5rem;
 
-    .mat-icon-outside {
-      background: #e6e6e6;
-      box-shadow: inset 5px 5px 14px #b8b8b8, inset -5px -5px 14px #ffffff;
+    mat-icon.action {
+      font-size: 50px;
+      color: #3074A6;
       border-radius: 50%;
-      height: 60px;
-      width: 60px;
-      padding: 0.5rem;
-
-      mat-icon.action {
-        font-size: 50px;
-        color: #3074A6;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        padding: 5px;
-        background: linear-gradient(145deg, #f6f6f6, #cfcfcf);
-        box-shadow:  9px 9px 18px #e4e4e4, -9px -9px 18px #e8e8e8;
-      }
-
+      height: 50px;
+      width: 50px;
+      padding: 5px;
+      background: linear-gradient(145deg, #f6f6f6, #cfcfcf);
+      box-shadow:  9px 9px 18px #e4e4e4, -9px -9px 18px #e8e8e8;
     }
-
-  }
-
-  .main-list-infos {
-    display: flex;
-    flex-direction: column;
-
-    .info-icon-outside {
-      margin-right: 0.5rem;
-      padding: 0.1rem;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #cfcfcf, #f6f6f6);
-      box-shadow:  33px 33px 66px #e4e4e4, -33px -33px 66px #e8e8e8;
-
-      mat-icon.info {
-        color: #3074A6;
-        padding: 5px;
-        border-radius: 50%;
-        padding: 5px;
-        background: linear-gradient(145deg, #ffffff, #dcdcdc);
-        box-shadow:  9px 9px 18px #e4e4e4, -9px -9px 18px #e8e8e8;
-      }
-
-    }
-
   }
 
 }
 
-.coli-icon { grid-area: icon; }
-.coli-event { grid-area: event; }
-.coli-info { grid-area: info; }
+.main-list-infos {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
 
-.mb-2 { margin-bottom: 0.5rem; }
+    mat-icon.info {
+      color: #3074A6;
+      padding: 5px;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(145deg, #ffffff, #dcdcdc);
+      box-shadow:  9px 9px 18px #e4e4e4, -9px -9px 18px #e8e8e8;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+    }
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
