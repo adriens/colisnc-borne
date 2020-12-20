@@ -4,7 +4,6 @@
 .main-search-card {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  margin-bottom: 2rem;
   border-radius: 10px;
   background: #e6e6e6;
   box-shadow: 6px 6px 12px #a6a6a6, -6px -6px 12px #ffffff;
@@ -12,7 +11,6 @@
 
   .main-search-form-field {
     width: 100%;
-    padding: 2rem;
 
     .main-search-label {
       margin-bottom: 0.5rem;
@@ -23,17 +21,15 @@
       display: flex;
       margin: 0;
       align-items: center;
-      width: 90%;
       min-width: 300px;
 
       input {
-        padding: 1.5rem;
+        padding: 1rem;
         width: 100%;
         border-radius: 15px;
         background: #e6e6e6;
         box-shadow: inset 6px 6px 20px #a6a6a6, inset -6px -6px 20px #ffffff;
         font-family: 'Montserrat', sans-serif;
-        font-size: 1rem;
       }
 
       mat-icon {
@@ -45,6 +41,11 @@
       }
     }
 
+  }
+
+  .scanner {
+    width: 60%;
+    margin: 1rem auto 0 auto;
   }
 
 }
@@ -66,17 +67,44 @@
   }
 }
 
-.main-list {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+.results {
+  display: flex;
+  justify-content: space-around;
 
-  mat-card {
-    margin-top: 1rem;
-    background: linear-gradient(145deg, #e6e6e6, #ffffff);
-    box-shadow:  5px 5px 10px #cccccc, -5px -5px 10px #f8f8f8;
-    min-width: 300px;
+  .main-list {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 55vw;
+
+    mat-card {
+      margin-top: 1rem;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:  5px 5px 10px #cccccc, -5px -5px 10px #f8f8f8;
+      min-width: 300px;
+    }
+
   }
+
+  .main-list-empty {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    mat-card {
+      margin-top: 1rem;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:  5px 5px 10px #cccccc, -5px -5px 10px #f8f8f8;
+      min-width: 300px;
+    }
+  }
+
+  .qrcode {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+  }
+
 }
 
 :host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle { stroke: #3074A6; }
