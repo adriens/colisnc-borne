@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Colis } from '../../model/colis.model';
 
 @Component({
   selector: 'app-colis',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ColisComponent implements OnInit {
 
-  @Input() coli: any;
+  @Input() coli: Colis;
 
   constructor() { }
 
