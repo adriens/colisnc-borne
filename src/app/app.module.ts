@@ -35,7 +35,6 @@ import { ColisComponent } from './view/colis/colis.component';
     HeaderComponent,
     SearchComponent,
     ColisComponent,
-    BottomSheetComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -46,7 +45,7 @@ import { ColisComponent } from './view/colis/colis.component';
     MatButtonModule, MatFormFieldModule, MatIconModule,
     MatInputModule, MatListModule, MatSelectModule,
     MatSidenavModule, MatCardModule, MatTableModule,
-    MatProgressSpinnerModule, MatBottomSheetModule,
+    MatProgressSpinnerModule,
 
     QRCodeModule,
     ZXingScannerModule,
