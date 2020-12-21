@@ -5,12 +5,12 @@
         <div class="main-search-container-input">
           <input #test class="main-search-input" formControlName="requiredInput" autocomplete="off"/>
           <mat-icon matSuffix class="main-search-icon" (click)="search(test.value)">search</mat-icon>
-          <mat-icon matSuffix class="main-search-icon" (click)="readQrcode()">qr_code_scanner</mat-icon>
+<!--          <mat-icon matSuffix class="main-search-icon" (click)="readQrcode()">qr_code_scanner</mat-icon> -->
         </div>
     </div>
-    <div class="scanner" *ngIf="scan">
+<!--    <div class="scanner" *ngIf="scan">
       <zxing-scanner [formats]="['QR_CODE']" (scanSuccess)="scanSuccessHandler($event)"></zxing-scanner>
-    </div>
+    </div> -->
 </mat-card>
 
 <div class="main-spinner" *ngIf="loading">
