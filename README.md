@@ -47,7 +47,7 @@ docker run -d -p 8080:8080 rastadidi/colisnc-api:latest
 
 Run `colisnc-borne` image with -p to define a port mapping.
 ```
-docker run -d -p 8081:80 colisnc-borne
+docker run -d -p 8081:8080 colisnc-borne
 ```
 
 Navigate to `http://localhost:8080/`.
