@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Build Docker image
+
+Run `ng build --prod --output-path=dist` for a production build. The build artifacts will be stored in the `dist/` directory.
+Run `docker build -t colisncborne .`. With the -t argument, we define the name of the image. The second argument (".") defines the location of the Dockerfile. This command can take a while because images have to be downloaded and the angular app has to be compiled.
+
+## Running Docker container
+
+Run `docker run -p 8080:80 colisncborne`. With -p we define a port mapping. The last argument is the name of the image ("angular") we want to use.
