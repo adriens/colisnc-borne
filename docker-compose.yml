@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  colisnc-api-opt:
+    image: rastadidi/colisnc-api
+    ports:
+      - 8080:8080    
+  colisnc-borne-opt:
+    image: colisnc-borne
+    ports:
+      - 8081:8080
