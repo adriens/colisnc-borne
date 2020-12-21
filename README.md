@@ -21,8 +21,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Docker
 
-#### Build Docker image
-Run production build. The build artifacts will be stored in the `dist/` directory.
+### Clone project
+Clone `colisnc-borne` project locally abd install the dependencies.
+```
+git clone https://github.com/adriens/colisnc-borne.git
+cd colisnc-borne
+npm install
+```
+
+### Build Docker image
+Run production build in project directory. The build artifacts will be stored in the `dist/` directory.
 ```
 ng build --prod --output-path=dist
 ``` 
@@ -33,13 +41,17 @@ This command can take a while because images have to be downloaded and the angul
 ```
 docker build -t colisnc-borne .
 ```
-#### Pulling Docker image
+
+### Pulling Docker image
 Pull `colisnc-api` image with `lastest` tag.
 ```
 docker pull rastadidi/colisnc-api:latest
 ``` 
 
-#### Running Docker container
+### Running Docker
+Once the images are built or pulled.
+
+#### Running Docker Container
 Run `colisnc-api` image with -p to define a port mapping.
 ```
 docker run -d -p 8080:8080 rastadidi/colisnc-api:latest
@@ -51,3 +63,10 @@ docker run -d -p 8081:8080 colisnc-borne
 ```
 
 Navigate to `http://localhost:8081/`.
+
+#### Running Docker Compose
+Run containers in the background.
+```
+docker-compose up -d
+docker ps
+```
