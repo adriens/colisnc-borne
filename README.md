@@ -50,4 +50,4 @@ Run `colisnc-borne` image with -p to define a port mapping.
 docker run -d -p 8081:8080 colisnc-borne
 ```
 
-Navigate to `http://localhost:8080/`.
+Navigate to `http://localhost:8081/`.
