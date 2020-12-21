@@ -36,4 +36,4 @@ Run `docker build -t colisncborne .`. With the -t argument, we define the name o
 
 Run `docker run -p 8080:80 colisncborne`. With -p we define a port mapping. The last argument is the name of the image ("angular") we want to use.
 
-Navigate to `http://localhost:8081/`.
+Navigate to `http://localhost:8080/`.
