@@ -64,7 +64,7 @@ docker run -d -p 8081:8080 colisnc-borne
 
 Navigate to `http://localhost:8081/`.
 
-#### Running Docker Compose
+#### Or Running Docker Compose
 Run containers in the background.
 ```
 docker-compose up -d
