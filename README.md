@@ -29,6 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Build Docker image
 
 Run `ng build --prod --output-path=dist` for a production build. The build artifacts will be stored in the `dist/` directory.
+
 Run `docker build -t colisncborne .`. With the -t argument, we define the name of the image. The second argument (".") defines the location of the Dockerfile. This command can take a while because images have to be downloaded and the angular app has to be compiled.
 
 ## Running Docker container
