@@ -3,8 +3,8 @@
     <div class="form-field main-search-form-field">
         <div class="main-search-label">Numéro de colis</div>
         <div class="main-search-container-input">
-          <input #test class="main-search-input" formControlName="requiredInput" autocomplete="off"/>
-          <mat-icon matSuffix class="main-search-icon" (click)="search(test.value)">search</mat-icon>
+          <input #test (keydown.enter)="search(test.value)" class="main-search-input" formControlName="requiredInput" autocomplete="off"/>
+          <mat-icon onmouseover="" style="cursor: pointer;" matSuffix class="main-search-icon" (click)="search(test.value)">search</mat-icon>
         </div>
     </div>
 </mat-card>

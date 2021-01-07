@@ -28,8 +28,8 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { HeaderComponent } from './core/components/header/header.component';
 import { SearchComponent } from './view/search/search.component';
 import { ColisComponent } from './view/colis/colis.component';
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { BottomSheetComponent } from './view/bottom-sheet/bottom-sheet.component';
+// import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+// import { BottomSheetComponent } from './view/bottom-sheet/bottom-sheet.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { BottomSheetComponent } from './view/bottom-sheet/bottom-sheet.component
     HeaderComponent,
     SearchComponent,
     ColisComponent,
-    BottomSheetComponent,
+    // BottomSheetComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -48,7 +48,8 @@ import { BottomSheetComponent } from './view/bottom-sheet/bottom-sheet.component
     MatButtonModule, MatFormFieldModule, MatIconModule,
     MatInputModule, MatListModule, MatSelectModule,
     MatSidenavModule, MatCardModule, MatTableModule,
-    MatProgressSpinnerModule, MatBottomSheetModule,
+    MatProgressSpinnerModule,
+    // MatBottomSheetModule,
 
     FlexLayoutModule,
     NgxQRCodeModule,

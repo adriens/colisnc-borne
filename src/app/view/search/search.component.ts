@@ -47,9 +47,9 @@ export class SearchComponent implements OnInit {
     router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
 
-        var param = this.route.snapshot.paramMap.get('id');
+        let param = this.route.snapshot.paramMap.get('id');
 
-        if(param) {
+        if (param) {
           this.showColis = true;
           this.colisService.getColis(param).subscribe(colis => {
             this.storeService.setStoreLoading(false);
